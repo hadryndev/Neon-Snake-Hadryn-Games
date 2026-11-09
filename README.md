@@ -1,37 +1,27 @@
-# Neon Snake 🐍 — Hadryn Games
+# Neon Snake — v1.2.0 The Shrink Update 🐍
 
-Jogo Snake moderno feito em **HTML5, CSS3 e JavaScript puro**. Roda em navegadores modernos, sem instalação, compilação ou dependências.
+**The Shrink Update** — official v1.2.0 build approved for release.
 
-**Versão:** 1.1.0 — Speed Boost Update
+## Play
 
-## 🎮 Jogar
+Open `index.html` in a modern desktop or mobile browser. No installation or internet connection is required.
 
-https://hadryndev.github.io/Neon-Snake-Hadryn-Games/
+- **Move:** Arrow keys or WASD (swipe or directional buttons on mobile)
+- **Pause:** Space
+- **Restart:** Restart button
 
-## Controles
+## Mechanics
 
-- **Setas** ou **WASD**: movimentar
-- **Espaço**: pausar e continuar
-- **Celular:** deslizar na tela ou usar botões direcionais
-- **Reiniciar:** botão dedicado na interface
+- **Food:** +1 point and +1 segment. During Boost, +2 points.
+- **Normal speed:** fixed at 7.5 cells per second.
+- **Boost:** fixed at 10 cells per second for 10 seconds, with a light trail and ×2 Food score. A golden bolt spawns roughly every 35 seconds of active play, lasting 8 seconds on the board. No stacking.
+- **Shrink:** removes 50% of the snake's length, rounding remaining segments up, never below 3. It stays on the board for 5 seconds.
+- **Shrink RNG:** checks when Food is eaten, only after the snake reaches 60 segments and meets the growth requirement. Chances per eligible Food: 3% for the first collected Shrink, 2% for the second, 1% for the third, 0.5% thereafter. Only one Shrink can be present at a time. After collecting a Shrink, the snake must grow another 30 segments before becoming eligible again (and must have at least 60 segments).
+- **Pause:** freezes all in-game timers.
+- **Best score:** uses a separate record from v1.1.0 because the scoring system has changed.
 
-## Mecânicas
+## Publishing
 
-- Bolinhas rosas: **+10 pontos** e a cobra cresce
-- **Raio dourado ⚡**: surge a cada quatro bolinhas coletadas, enquanto não houver outro raio nem boost ativo. Desaparece se não for coletado em 9 segundos de jogo
-- Ao pegar o raio, ativa **Speed Boost** por **5 segundos de jogo**: cobra mais rápida, rastro luminoso e **pontuação ×2** para cada bolinha rosa consumida (**+20 pontos**)
-- O cronômetro do boost pausa junto com o jogo
-- Progressão de nível com aumento gradual de velocidade
-- Recorde salvo no navegador usando `localStorage`
-- Colisão com paredes ou com a própria cobra encerra a partida
+Publish the `index.html` and `README.md` files to the repository root on the `main` branch. Then create tag `v1.2.0` targeting that commit.
 
-## Histórico
-
-- **v1.1.0:** Speed Boost, rastro luminoso, multiplicador temporário ×2 e indicador de tempo
-- **v1.0.0:** versão inicial com Snake clássico, níveis, pontuação, recorde, pausa e controles móveis
-
-## Desenvolvimento local
-
-Abra `index.html` em um navegador. Para publicar, configure o GitHub Pages com a branch `main` e a pasta `/ (root)`.
-
-Projeto Hadryn Games.
+Hadryn Games · 2026
