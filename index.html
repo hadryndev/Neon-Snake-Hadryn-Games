@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#081321">
-<title>Neon Snake — Hadryn Games</title>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080f1b">
+<title>Neon Snake — Starring Boxie</title>
 <style>
-:root{color-scheme:dark;--bg:#080e19;--panel:#111c2d;--text:#e8f8fa;--muted:#91a8b8;--green:#64ffc1;--pink:#ff658e;--gold:#ffcb5f;--cyan:#57d9ff}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0%,#17304a,var(--bg) 60%);color:var(--text);font:500 16px system-ui,-apple-system,Segoe UI,sans-serif;display:grid;place-items:center;padding:22px}.app{width:min(100%,660px)}header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.eyebrow{letter-spacing:.28em;color:var(--green);font-size:.7rem;font-weight:800}h1{margin:4px 0 0;font-size:clamp(2rem,7vw,3.1rem);letter-spacing:-.06em;line-height:1}h1 span{color:var(--green)}.tag{font-size:.72rem;color:var(--muted);border:1px solid #39506a;border-radius:999px;padding:8px 12px}.scores{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}.stat{background:var(--panel);border:1px solid #294053;border-radius:14px;padding:12px 16px}.stat small{display:block;color:var(--muted);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}.stat strong{display:block;font-size:1.6rem;font-variant-numeric:tabular-nums}.effects{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;min-height:30px}.effect{display:flex;align-items:center;gap:9px;padding:6px 10px;border-radius:9px;font-size:.78rem;font-weight:800;border:1px solid #755d30;background:#3c301a;color:#ffe49d}.effect.shrink{background:#153a3c;border-color:#257c88;color:#9ef5ff}.effect[hidden]{display:none}.meter{width:74px;height:7px;border-radius:99px;background:#101a29;overflow:hidden}.fill{height:100%;width:100%;background:var(--gold)}.effect.shrink .fill{background:var(--cyan)}.board-shell{position:relative;padding:9px;background:linear-gradient(145deg,#2b4f61,#112234);border:1px solid #45697a;border-radius:20px;box-shadow:0 22px 65px #0008,0 0 24px #36e1ab0b}canvas{display:block;width:100%;aspect-ratio:1;background:#091727;border-radius:12px;touch-action:none}.overlay{position:absolute;inset:9px;display:grid;place-items:center;background:#07121de8;border-radius:12px;text-align:center;padding:24px;backdrop-filter:blur(5px)}.overlay[hidden]{display:none}.overlay-content{max-width:355px}.overlay-icon{font-size:3rem;margin-bottom:8px}.overlay h2{font-size:2rem;margin:0 0 8px}.overlay p{color:var(--muted);line-height:1.5;margin:0 0 20px}button{font:inherit;cursor:pointer;color:var(--bg);background:var(--green);border:0;border-radius:11px;padding:12px 20px;font-weight:800;transition:transform .12s,filter .12s}button:hover{filter:brightness(1.09)}button:active{transform:scale(.96)}.footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px}.hint{font-size:.8rem;color:var(--muted);line-height:1.6}.actions{display:flex;gap:8px}.secondary{background:#20364a;border:1px solid #39576a;color:var(--text)}.legend{margin-top:12px;text-align:center;font-size:.77rem;color:var(--muted)}.mobile-controls{display:none;justify-content:center;grid-template-columns:repeat(3,58px);gap:6px;margin:18px auto 0}.mobile-controls button{height:53px;padding:0;background:#203a4e;color:var(--green);font-size:1.3rem;touch-action:manipulation}.mobile-controls .up{grid-column:2}.mobile-controls .left{grid-column:1;grid-row:2}.mobile-controls .down{grid-column:2;grid-row:2}.mobile-controls .right{grid-column:3;grid-row:2}@media(pointer:coarse),(max-width:600px){.mobile-controls{display:grid}.tag{display:none}}@media(max-width:390px){.stat{padding:10px}.stat strong{font-size:1.3rem}.footer{flex-wrap:wrap}.hint{max-width:230px}}
+
+#gameScreen{color-scheme:dark;--bg:#080e19;--panel:#111c2d;--text:#e8f8fa;--muted:#91a8b8;--green:#64ffc1;--pink:#ff658e;--gold:#ffcb5f;--cyan:#57d9ff}*{box-sizing:border-box}#gameScreen{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0%,#17304a,var(--bg) 60%);color:var(--text);font:500 16px system-ui,-apple-system,Segoe UI,sans-serif;display:grid;place-items:center;padding:22px}.app{width:min(100%,660px)}#gameScreen header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.eyebrow{letter-spacing:.28em;color:var(--green);font-size:.7rem;font-weight:800}#gameScreen h1{margin:4px 0 0;font-size:clamp(2rem,7vw,3.1rem);letter-spacing:-.06em;line-height:1}#gameScreen h1 span{color:var(--green)}#gameScreen .tag{font-size:.72rem;color:var(--muted);border:1px solid #39506a;border-radius:999px;padding:8px 12px}.scores{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}.stat{background:var(--panel);border:1px solid #294053;border-radius:14px;padding:12px 16px}.stat small{display:block;color:var(--muted);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}.stat strong{display:block;font-size:1.6rem;font-variant-numeric:tabular-nums}.effects{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;min-height:30px}.effect{display:flex;align-items:center;gap:9px;padding:6px 10px;border-radius:9px;font-size:.78rem;font-weight:800;border:1px solid #755d30;background:#3c301a;color:#ffe49d}.effect.shrink{background:#153a3c;border-color:#257c88;color:#9ef5ff}.effect[hidden]{display:none}.meter{width:74px;height:7px;border-radius:99px;background:#101a29;overflow:hidden}.fill{height:100%;width:100%;background:var(--gold)}.effect.shrink .fill{background:var(--cyan)}.board-shell{position:relative;padding:9px;background:linear-gradient(145deg,#2b4f61,#112234);border:1px solid #45697a;border-radius:20px;box-shadow:0 22px 65px #0008,0 0 24px #36e1ab0b}#game{display:block;width:100%;aspect-ratio:1;background:#091727;border-radius:12px;touch-action:none}.overlay{position:absolute;inset:9px;display:grid;place-items:center;background:#07121de8;border-radius:12px;text-align:center;padding:24px;backdrop-filter:blur(5px)}.overlay[hidden]{display:none}.overlay-content{max-width:355px}.overlay-icon{font-size:3rem;margin-bottom:8px}.overlay h2{font-size:2rem;margin:0 0 8px}.overlay p{color:var(--muted);line-height:1.5;margin:0 0 20px}#gameScreen button{font:inherit;cursor:pointer;color:var(--bg);background:var(--green);border:0;border-radius:11px;padding:12px 20px;font-weight:800;transition:transform .12s,filter .12s}#gameScreen button:hover{filter:brightness(1.09)}#gameScreen button:active{transform:scale(.96)}.footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px}.hint{font-size:.8rem;color:var(--muted);line-height:1.6}.actions{display:flex;gap:8px}.secondary{background:#20364a;border:1px solid #39576a;color:var(--text)}.legend{margin-top:12px;text-align:center;font-size:.77rem;color:var(--muted)}.mobile-controls{display:none;justify-content:center;grid-template-columns:repeat(3,58px);gap:6px;margin:18px auto 0}.mobile-controls #gameScreen button{height:53px;padding:0;background:#203a4e;color:var(--green);font-size:1.3rem;touch-action:manipulation}.mobile-controls .up{grid-column:2}.mobile-controls .left{grid-column:1;grid-row:2}.mobile-controls .down{grid-column:2;grid-row:2}.mobile-controls .right{grid-column:3;grid-row:2}@media(pointer:coarse),(max-width:600px){.mobile-controls{display:grid}#gameScreen .tag{display:none}}@media(max-width:390px){.stat{padding:10px}.stat strong{font-size:1.3rem}.footer{flex-wrap:wrap}.hint{max-width:230px}}
 .countdown{position:absolute;z-index:4;inset:9px;display:grid;place-items:center;pointer-events:none;background:#09172765;border-radius:12px;color:#e8f8ff;font-size:clamp(4rem,16vw,8rem);font-weight:950;letter-spacing:-.05em;text-shadow:0 0 30px #64ffc188;animation:countdownFade .94s ease-in-out both}.countdown[hidden]{display:none}.countdown.go{font-size:clamp(2.2rem,8vw,4.8rem);color:#64ffc1;text-shadow:0 0 18px #64ffc1,0 0 45px #64ffc1a0}@keyframes countdownFade{0%{opacity:0;transform:scale(.84)}28%{opacity:1;transform:scale(1.06)}72%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.11)}}
 .prototype-note{margin-top:12px;padding:10px 13px;background:#2b1822;border:1px solid #863b51;border-radius:11px;color:#ffd0dc;font-size:.8rem;text-align:center}
 
@@ -12,44 +12,73 @@
 /* Optional crosshair: translucent cell guides, not solid borders. */
 .grid-guide-control{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;padding:10px 13px;background:#101f30;border:1px solid #2b4858;border-radius:11px;font-size:.84rem;color:var(--text)}
 .grid-guide-control small{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}
-.grid-guide-control button{min-width:73px;padding:7px 13px;background:#20364a;border:1px solid #456070;color:var(--text);font-size:.78rem}
+.grid-guide-control #gameScreen button{min-width:73px;padding:7px 13px;background:#20364a;border:1px solid #456070;color:var(--text);font-size:.78rem}
 .grid-guide-control button[aria-pressed="true"]{background:#124d40;border-color:#36b891;color:#adffe1}
-</style>
-</head>
-<body>
+
+
+:root{--bg:#080f1b;--panel:#111d2e;--text:#e8fff9;--muted:#9cbcb8;--lime:#aaff5c;--aqua:#5cf5e2;--pink:#ff6daf;--edge:#2a4552}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 75% 20%,#17373b 0,transparent 43%),radial-gradient(ellipse at 20% 90%,#1b1c39 0,transparent 48%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(#4bc5ac44 1px,transparent 1px),linear-gradient(90deg,#4bc5ac44 1px,transparent 1px);background-size:35px 35px;mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 85%,transparent)}
+.shell{position:relative;max-width:1120px;margin:0 auto;min-height:100vh;padding:30px 25px 20px;display:flex;flex-direction:column;justify-content:center}.topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px;color:var(--muted);font-size:12px;letter-spacing:.18em;text-transform:uppercase}.brand{display:flex;align-items:center;gap:10px}.brand-mark{width:27px;height:27px;border:2px solid var(--lime);border-radius:8px;display:grid;place-items:center;box-shadow:0 0 12px #98ff5a66;color:var(--lime);font-weight:900;letter-spacing:0}.tag{color:var(--lime);border:1px solid #9aff5d50;border-radius:99px;padding:6px 12px;font-size:10px}
+.content{display:grid;grid-template-columns: minmax(300px,.94fr) minmax(300px,1.06fr);gap:25px;align-items:center}.menu-panel{padding:26px 22px 28px;background:linear-gradient(150deg,#122135ee,#0b1527ee);border:1px solid #46665b80;border-radius:25px;box-shadow:0 18px 75px #0007, inset 0 1px #ffffff12;position:relative}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.3em;color:var(--aqua);text-transform:uppercase}.logo{font-size:clamp(43px,5.6vw,71px);line-height:.95;font-weight:1000;letter-spacing:-.065em;margin:15px 0 10px;text-shadow:0 0 30px #aaff5550}.logo span{color:var(--lime)}.subtitle{color:var(--muted);font-size:14px;margin:0 0 27px}.menu-buttons{display:grid;gap:10px}.menu-button{font:700 15px system-ui;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center;width:100%;border-radius:13px;border:1px solid #496a74;background:linear-gradient(#1b3243,#152838);color:var(--text);padding:14px 18px;cursor:pointer;transition:transform .15s,border-color .15s,box-shadow .15s}.menu-button:hover,.menu-button:focus-visible{transform:translateX(4px);border-color:var(--aqua);box-shadow:0 0 18px #66eedd33;outline:none}.menu-button.primary{background:linear-gradient(100deg,#c1ff71,#77efb9);border-color:#c9ff87;color:#0b2421;box-shadow:0 0 25px #abff5560}.menu-button.primary:hover{box-shadow:0 0 28px #bfff84a0}.arrow{opacity:.75}.footer-note{display:flex;justify-content:space-between;gap:12px;margin-top:21px;font-size:11px;color:#819d9f}.stage{position:relative;min-height:540px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #4da19535;border-radius:24px;background:radial-gradient(ellipse at center,#184e4a70,transparent 65%),linear-gradient(155deg,#0f23324a,#050e1f66);overflow:hidden}.orbit{position:absolute;width:380px;height:380px;border:1px dashed #95ff8850;border-radius:50%;box-shadow:0 0 65px #99ff5a20}.orbit:after{content:"";position:absolute;inset:40px;border:1px solid #98f7c51f;border-radius:50%}.spark{position:absolute;color:var(--lime);font-size:25px;text-shadow:0 0 20px currentColor}.s1{top:13%;left:21%}.s2{right:16%;top:25%;color:var(--pink)}.s3{right:23%;bottom:18%;color:var(--aqua)}.boxie{position:relative;width:min(94%,480px);filter:drop-shadow(0 18px 15px #0008);animation:float 4s ease-in-out infinite}.boxie canvas{display:block;width:100%;height:auto}@keyframes float{50%{transform:translateY(-11px)}}.character-label{position:absolute;bottom:27px;padding:9px 18px;border:1px solid #b4ff8c70;border-radius:100px;background:#091b22bc;font-size:12px;color:#c6ffb8;letter-spacing:.16em;font-weight:800}.bottom{margin-top:20px;text-align:center;color:#7f9fa2;font-size:11px}.studio-signature{display:inline-flex;align-items:center;flex-direction:column;line-height:1;font:italic 22px "Brush Script MT","Segoe Script",cursive;letter-spacing:-.02em;color:#a7cdbf;transform:rotate(-5deg);opacity:.85}.studio-signature span{font-size:13px;margin-left:35px}.studio-signature svg{margin-top:2px;opacity:.65}.bottom{display:flex;align-items:center;justify-content:space-between;gap:15px}.demo-hint{font-size:10px;letter-spacing:.12em}.menu-overline{letter-spacing:.2em;color:#80aba9;font-size:10px}.switch select{background:#173441;color:#b9c7c9;padding:8px;border-radius:8px;border:1px solid #456276}
+.dialog{position:fixed;inset:0;background:#050d17dd;display:grid;place-items:center;padding:20px;z-index:3;backdrop-filter:blur(6px)}.dialog[hidden]{display:none}.dialog-card{position:relative;width:min(94vw,530px);max-height:85vh;overflow:auto;border-radius:22px;background:linear-gradient(140deg,#142737,#081723);border:1px solid #78d7c366;padding:28px;box-shadow:0 20px 80px #000b}.dialog h2{margin:4px 45px 15px 0;color:var(--lime);font-size:26px}.dialog p,.dialog li{color:#d0e9e4;line-height:1.65;font-size:14px}.dialog ul{padding-left:20px}.close{position:absolute;right:18px;top:18px;background:#1b3541;color:white;border:1px solid #6caba5;border-radius:10px;padding:8px 11px;cursor:pointer}.entry{padding:12px 0;border-bottom:1px solid #3a59605c}.entry strong{color:var(--lime)}.switch{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #3a59605c;color:#d0e9e4}.switch input{accent-color:#aaff5c;width:18px;height:18px}.micro{color:#85a8a1!important;font-size:12px!important}.menu-toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);padding:12px 18px;background:#132c33;border:1px solid var(--lime);color:#d8ffb9;border-radius:10px;z-index:6;font-size:13px;box-shadow:0 0 25px #aaff5544}.menu-toast[hidden]{display:none}
+@media(max-width:760px){.shell{padding:17px 14px 25px}.content{grid-template-columns:1fr}.stage{min-height:330px;order:-1}.boxie{max-width:300px}.orbit{width:250px;height:250px}.menu-panel{padding:23px}.logo{font-size:52px}.topbar{margin-bottom:12px}.character-label{bottom:10px}.footer-note{flex-wrap:wrap}.bottom{flex-direction:column;gap:12px}}
+@media(prefers-reduced-motion:reduce){.boxie{animation:none}.menu-button{transition:none}}
+
+#mainMenu[hidden],#gameScreen[hidden]{display:none!important}
+#gameScreen{min-height:100vh;display:grid;place-items:center;padding:22px}
+#gameScreen.hide-mobile-controls .mobile-controls{display:none!important}
+#gameScreen .actions{flex-wrap:wrap;justify-content:flex-end}
+</style></head><body>
+<div id="mainMenu">
+<main class="shell"><header class="topbar"><div class="brand"><span class="menu-overline">WELCOME TO THE ARCADE</span></div><span class="tag">v1.4.0</span></header>
+<div class="content"><section class="menu-panel"><div class="eyebrow">The arcade snake adventure</div><h1 class="logo">NEON<br><span>SNAKE</span></h1><p class="subtitle">Starring Boxie — the little snake with a big personality.</p><nav class="menu-buttons" aria-label="Main menu"><button class="menu-button primary" data-screen="Play">PLAY <span class="arrow">▶</span></button><button class="menu-button" data-screen="Achievements">ACHIEVEMENTS <span class="arrow">↗</span></button><button class="menu-button" data-screen="How to Play">HOW TO PLAY <span class="arrow">↗</span></button><button class="menu-button" data-screen="Settings">SETTINGS <span class="arrow">↗</span></button><button class="menu-button" data-screen="Credits">CREDITS <span class="arrow">↗</span></button></nav><div class="footer-note"><span>★ Eat. Grow. Survive.</span><span>STARRING BOXIE</span></div></section>
+<section class="stage" aria-label="Boxie, the neon green snake"><div class="orbit"></div><span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
+<div class="boxie"><canvas id="boxieCanvas" width="960" height="880" aria-label="Boxie, the square-headed neon snake with a tapered tail" role="img"></canvas></div><div class="character-label">MEET BOXIE! ♡</div></section></div><footer class="bottom"><span class="studio-signature" aria-label="Hadryn Games">Hadryn <span>Games</span><svg viewBox="0 0 112 9" width="112" height="9" aria-hidden="true"><path d="M2 6 Q20 1 41 5 T94 3 L110 2" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></span><span class="demo-hint">EAT. GROW. SURVIVE.</span></footer></main>
+<div class="dialog" id="dialog" hidden><div class="dialog-card" role="dialog" aria-modal="true" aria-labelledby="dialogTitle"><button class="close" id="close" aria-label="Close">✕</button><h2 id="dialogTitle"></h2><div id="dialogContent"></div></div></div>
+</div>
+<div id="gameScreen" hidden>
 <main class="app">
-<header><div><div class="eyebrow">ARCADE COLLECTION</div><h1>NEON <span>SNAKE</span></h1></div><div class="tag">HADRYN GAMES • v1.3.0</div></header>
+<header><div><div class="eyebrow">ARCADE COLLECTION</div><h1>NEON <span>SNAKE</span></h1></div><div class="tag">v1.4.0</div></header>
 <section class="scores" aria-label="Scoreboard"><div class="stat"><small>Score</small><strong id="score">0</strong></div><div class="stat"><small>Best</small><strong id="best">0</strong></div><div class="stat"><small>Length</small><strong id="length">3</strong></div></section>
-<div class="effects" aria-live="polite"><div class="effect" id="boostEffect" hidden><span>⚡ BOOST ×2</span><div class="meter"><div class="fill" id="boostFill"></div></div><span id="boostTime">10.0s</span></div><div class="effect shrink" id="shrinkEffect" hidden><span>✂ SHRINK AVAILABLE</span><div class="meter"><div class="fill" id="shrinkFill"></div></div><span id="shrinkTime">5.0s</span></div></div>
-<div class="barrier-status"><span id="barrierStatus1">BAR 1: ACTIVE</span><span id="barrierStatus2">BAR 2: ACTIVE</span></div><div class="board-shell"><div class="toast" id="toast" hidden></div><canvas id="game" width="600" height="600" role="img" aria-label="Snake game board"></canvas><div class="countdown" id="countdown" hidden aria-live="off"></div><div class="overlay" id="overlay"><div class="overlay-content"><div class="overlay-icon" id="overlayIcon">🐍</div><h2 id="overlayTitle">Ready to play?</h2><p id="overlayText">Eat pink food to grow. Avoid the glowing barriers! Trap each one to break it.</p><button id="start">Start game</button></div></div></div>
-<div class="footer"><div class="hint">Move: <b>WASD</b> or <b>arrow keys</b><br>Pause: <b>Space</b> • Swipe on touchscreens</div><div class="actions"><button class="secondary" id="pause">Pause</button><button class="secondary" id="restart">Restart</button></div></div>
+<div class="effects" aria-live="polite"><div class="effect" id="boostEffect" hidden><span>⚡ SPEED SNACK ×2</span><div class="meter"><div class="fill" id="boostFill"></div></div><span id="boostTime">10.0s</span></div><div class="effect shrink" id="shrinkEffect" hidden><span>✂ SHRINK SNACK AVAILABLE</span><div class="meter"><div class="fill" id="shrinkFill"></div></div><span id="shrinkTime">5.0s</span></div></div>
+<div class="barrier-status"><span id="barrierStatus1">BAR 1: ACTIVE</span><span id="barrierStatus2">BAR 2: ACTIVE</span></div><div class="board-shell"><div class="toast" id="toast" hidden></div><canvas id="game" width="600" height="600" role="img" aria-label="Snake game board"></canvas><div class="countdown" id="countdown" hidden aria-live="off"></div><div class="overlay" id="overlay"><div class="overlay-content"><div class="overlay-icon" id="overlayIcon">🐍</div><h2 id="overlayTitle">Ready to play?</h2><p id="overlayText">Eat Neon Nibbles to grow. Dodge Glowing Barriers, and trap each one for 3 seconds to break it.</p><button id="start">Start game</button></div></div></div>
+<div class="footer"><div class="hint">Move: <b>WASD</b> or <b>arrow keys</b><br>Pause: <b>Space</b> • Swipe on touchscreens</div><div class="actions"><button class="secondary" id="backToMenu" type="button">Menu</button><button class="secondary" id="pause">Pause</button><button class="secondary" id="restart">Restart</button></div></div>
 <div class="grid-guide-control"><div><strong>Grid Guide</strong><small>Subtle guides for all collectible items</small></div><button id="gridGuideToggle" type="button" aria-pressed="false">OFF</button></div>
-<div class="legend">● Food +1 &nbsp; • &nbsp; ⚡ Boost: 10s / ×2 &nbsp; • &nbsp; ✂ Shrink: −50% &nbsp; • &nbsp; 🟥 Glowing Barriers &nbsp; • &nbsp; ◉ Fake Food</div><div class="prototype-note">Block a glowing barrier for 3 seconds to break it. Beware of Fake Food!</div>
+<div class="legend">● Neon Nibble +1 &nbsp; • &nbsp; ⚡ Speed Snack: 10s / ×2 &nbsp; • &nbsp; ✂ Shrink Snack: −50% &nbsp; • &nbsp; 🟥 Glowing Barriers &nbsp; • &nbsp; ◉ Trick Treat</div><div class="prototype-note">Destroy both barriers to reveal Trick Treat. Each round changes their patrol directions!</div>
 <div class="mobile-controls" aria-label="Directional controls"><button class="up" data-dir="up" aria-label="Up">▲</button><button class="left" data-dir="left" aria-label="Left">◀</button><button class="down" data-dir="down" aria-label="Down">▼</button><button class="right" data-dir="right" aria-label="Right">▶</button></div>
 </main>
+</div>
 <script>
 (()=>{'use strict';
 const canvas=document.querySelector('#game'),ctx=canvas.getContext('2d'),SIZE=20,CELL=canvas.width/SIZE;
 const BARRIER_SETTINGS={length:3,minX:1,maxX:16,stepMs:560,trapDuration:3000,respawnWarning:3000};
-const BARRIER_SPAWNS=[{id:0,y:5,x:3,dir:1},{id:1,y:14,x:14,dir:-1}];
+// All lanes are the sixth line/column in from their respective edges (zero-based 5 and 14).
+// Respawn rounds: horizontal pair, vertical pair, then horizontal + vertical.
+const BARRIER_SPAWNS=[{id:0,axis:'h',lane:5,pos:3,dir:1},{id:1,axis:'h',lane:14,pos:14,dir:-1}];
+function stageLayout(stage){
+ if(stage===1)return BARRIER_SPAWNS.map(b=>({...b}));
+ if(stage===2)return [{id:0,axis:'v',lane:5,pos:3,dir:1},{id:1,axis:'v',lane:14,pos:14,dir:-1}];
+ // Mixed layout stays as the repeatable endgame configuration.
+ return [{id:0,axis:'h',lane:5,pos:3,dir:1},{id:1,axis:'v',lane:14,pos:14,dir:-1}];
+}
 const FAKE_SETTINGS={minInterval:16000,maxInterval:28000,visible:8500};
-const SETTINGS={normalInterval:1000/6.5,boostInterval:1000/8.5,boostDuration:10000,boostSpawnInterval:35000,boostVisible:8000,shrinkVisible:5000,shrinkMinLength:60,shrinkGrowthRequired:30,shrinkChances:[.03,.02,.01,.005],minLength:3};
+const SETTINGS={normalInterval:1000/6.5,boostInterval:1000/8.5,boostDuration:10000,boostSpawnInterval:55000,wallGraceMs:200,boostVisible:8000,shrinkVisible:5000,shrinkMinLength:60,shrinkGrowthRequired:30,shrinkChances:[.03,.02,.01,.005],minLength:3};
 const ACHIEVEMENTS=[
- ['first-bite','First Bite','Eat your first Food.'],
- ['full-power','Full Power','Collect your first Speed Boost.'],
- ['against-all-odds','Against All Odds','Collect your first Shrink.'],
+ ['first-bite','First Bite','Eat your first Neon Nibble.'],
+ ['full-power','Full Power','Collect your first Speed Snack.'],
+ ['against-all-odds','Against All Odds','Collect your first Shrink Snack.'],
  ['still-alive','Still Alive','Survive for 5 minutes in one run.'],
  ['endurance','Endurance','Survive for 10 minutes in one run.'],
  ['unstoppable','Unstoppable','Survive for 20 minutes in one run.'],
  ['snake-legend','Snake Legend','Survive for 30 minutes in one run.'],
  ['barrier-breaker','Barrier Breaker','Destroy both Glowing Barriers in one run.'],
- ['tricked',"You've Been Tricked!",'Collect your first Fake Food.'],
+ ['tricked',"You've Been Tricked!",'Collect your first Trick Treat.'],
  ['perfect-snake','The Perfect Snake','Fill all 400 cells and win the game.']
 ];
 const $=id=>document.getElementById(id);const scoreEl=$('score'),bestEl=$('best'),lengthEl=$('length'),overlay=$('overlay');
 let best=0;try{best=Number(localStorage.getItem('neon-snake-best-v120'))||0}catch{}bestEl.textContent=best;
-let countdownRemaining=0,runElapsed=0,barriers=[],barrierClock=0,fakeFood=null,fakeRemaining=0,fakeSpawnClock=0,fakeSpawnAt=20000,respawn=null,toastRemaining=0,notified={};
-let snake,pendingGrowth=0,renderFrom=[],food,boostItem,shrinkItem,dir,turnQueue=[],score,running=false,paused=false,last=0,acc=0,boostRemaining=0,boostItemRemaining=0,shrinkRemaining=0,boostSpawnClock=0,boostTrail=[],shrinksCollected=0,shrinkNextEligible=60;
+let countdownRemaining=0,runElapsed=0,barrierStage=1,barriers=[],barrierClock=0,fakeFood=null,fakeRemaining=0,fakeSpawnClock=0,fakeSpawnAt=20000,respawn=null,toastRemaining=0,notified={};
+let wallShockRemaining=0,snake,pendingGrowth=0,renderFrom=[],food,boostItem,shrinkItem,dir,turnQueue=[],score,running=false,paused=false,last=0,acc=0,boostRemaining=0,boostItemRemaining=0,shrinkRemaining=0,boostSpawnClock=0,boostTrail=[],shrinksCollected=0,shrinkNextEligible=60;
 const dirs={up:{x:0,y:-1},down:{x:0,y:1},left:{x:-1,y:0},right:{x:1,y:0}};
 // A short direction queue preserves fast corner inputs (Up -> Left -> Down).
 // One turn is applied per grid step to prevent accidental skipped turns or 180° reversals.
@@ -63,17 +92,19 @@ $('gridGuideToggle').addEventListener('click',()=>{
  syncGridGuide();draw();
 });
 const same=(a,b)=>!!a&&!!b&&a.x===b.x&&a.y===b.y;
-// Two independent patrols, permanently assigned to their own rows.
-function barrierCells(b,x=b.x){return Array.from({length:BARRIER_SETTINGS.length},(_,i)=>({x:x+i,y:b.y}))}
+// Orientation-aware patrol geometry. The logical cells drive rendering, collision and spawning.
+function barrierCells(b,pos=b.pos){return Array.from({length:BARRIER_SETTINGS.length},(_,i)=>b.axis==='h'?{x:pos+i,y:b.lane}:{x:b.lane,y:pos+i})}
 function occupiedByBarrier(cell){return barriers.some(b=>b.active&&barrierCells(b).some(part=>same(part,cell)))}
 function occupied(cell){return snake.some(part=>same(part,cell))||occupiedByBarrier(cell)}
-function pathIsClear(b,x){return x>=BARRIER_SETTINGS.minX&&x<=BARRIER_SETTINGS.maxX&&barrierCells(b,x).every(p=>!snake.some(s=>same(s,p)))}
-// A snake segment directly ahead blocks the patrol in EITHER direction.
-// Natural patrol limits are not considered a trap: they simply turn the bar around.
+function otherBarrierBlocks(b,pos){return barriers.some(other=>other.id!==b.id&&other.active&&barrierCells(other).some(p=>barrierCells(b,pos).some(q=>same(p,q))))}
+function validHomeLayout(layout){
+ const a=barrierCells(layout[0]),b=barrierCells(layout[1]);
+ return !a.some(p=>b.some(q=>same(p,q)))&&![...a,...b].some(p=>snake.some(s=>same(p,s)));
+}
 function blockedBySnakeAhead(b){
- const nextX=b.x+b.dir;
- if(nextX<BARRIER_SETTINGS.minX||nextX>BARRIER_SETTINGS.maxX)return false;
- return barrierCells(b,nextX).some(p=>snake.some(segment=>same(segment,p)));
+ const next=b.pos+b.dir;
+ if(next<BARRIER_SETTINGS.minX||next>BARRIER_SETTINGS.maxX)return false;
+ return barrierCells(b,next).some(p=>snake.some(segment=>same(segment,p)));
 }
 function playToast(text){$('toast').textContent=text;$('toast').hidden=false;toastRemaining=2800}
 function unlock(id,label){
@@ -84,53 +115,54 @@ function unlock(id,label){
  if(!already)playToast('🏆 ACHIEVEMENT UNLOCKED: '+label);
 }
 function eliminateBarrier(b){
- b.active=false;b.breakMs=0;b.shards=650;b.shardX=b.x;
+ b.active=false;b.breakMs=0;b.shards=650;b.shardPos=b.pos;
  if(barriers.every(x=>!x.active))unlock('barrier-breaker','Barrier Breaker');
 }
 function updateBarrierBreaking(b,dt){
  if(!b.active)return;
+ // A competing barrier must never count as the snake trapping this one.
+ if(otherBarrierBlocks(b,b.pos+b.dir)){b.breakMs=0;return}
  if(blockedBySnakeAhead(b)){b.breakMs+=dt;if(b.breakMs>=BARRIER_SETTINGS.trapDuration)eliminateBarrier(b)}
  else b.breakMs=0;
 }
 function patrolBarrier(b){
  if(!b.active)return;
- const nextX=b.x+b.dir;
- if(nextX<BARRIER_SETTINGS.minX||nextX>BARRIER_SETTINGS.maxX){
-  b.dir*=-1; // Turn around only at the fixed patrol limits.
-  return;
- }
- if(blockedBySnakeAhead(b))return; // Wait in place and continue breaking.
- b.x=nextX;
- // Barriers never cause Game Over by moving into the snake.
- // Relocate collectibles rather than hiding them under a passing bar.
+ const next=b.pos+b.dir;
+ if(next<BARRIER_SETTINGS.minX||next>BARRIER_SETTINGS.maxX){b.dir*=-1;return}
+ // Other barriers are the only reason to reverse direction away from an obstacle.
+ // We check the entire NEXT footprint before moving, so the bars never overlap.
+ if(otherBarrierBlocks(b,next)){b.dir*=-1;b.breakMs=0;return}
+ if(blockedBySnakeAhead(b))return; // Body contact traps; only this contributes to breaking.
+ b.pos=next;
+ // A moving barrier can overlap the BODY harmlessly; only a player's head moving into a bar kills.
  if(barrierCells(b).some(p=>same(p,food)))food=freeCell([boostItem,shrinkItem,fakeFood]);
  if(barrierCells(b).some(p=>same(p,boostItem))){boostItem=null;boostItemRemaining=0}
  if(barrierCells(b).some(p=>same(p,shrinkItem))){shrinkItem=null;shrinkRemaining=0}
- if(barrierCells(b).some(p=>same(p,fakeFood))){fakeFood=null;fakeRemaining=0}
 }
 function respawnBarrier(){
  if(!respawn)return;
- const b=barriers[respawn.id];
- // The original row and spawn are fixed. Never spawn inside the snake.
- if(!pathIsClear(b,b.homeX))return; // Keep warning visible until safe.
- b.x=b.homeX;b.dir=b.homeDir;b.active=true;b.breakMs=0;b.shards=0;
- respawn=null;
- playToast('⚠ GLOWING BARRIER RETURNED!');
+ const layout=stageLayout(respawn.stage);
+ // Wait for BOTH complete spawn footprints to be free before spawning together.
+ if(!validHomeLayout(layout))return;
+ barriers=layout.map(b=>({...b,homePos:b.pos,homeDir:b.dir,active:true,breakMs:0,shards:0,shardPos:b.pos}));
+ barrierStage=respawn.stage;respawn=null;
+ if(occupiedByBarrier(food))food=freeCell([boostItem,shrinkItem,fakeFood]);
+ if(occupiedByBarrier(boostItem)){boostItem=null;boostItemRemaining=0}
+ if(occupiedByBarrier(shrinkItem)){shrinkItem=null;shrinkRemaining=0}
+ playToast('⚠ TWO GLOWING BARRIERS RETURNED!');
 }
 function collectFake(){
  fakeFood=null;fakeRemaining=0;
- const candidates=barriers.filter(b=>!b.active&&(!respawn||respawn.id!==b.id));
- if(candidates.length&&!respawn){
-  const chosen=candidates[Math.floor(Math.random()*candidates.length)];
-  respawn={id:chosen.id,remaining:BARRIER_SETTINGS.respawnWarning};
-  playToast('⚠ FAKE FOOD! INCOMING BARRIER!');
+ if(barriers.every(b=>!b.active)&&!respawn){
+  respawn={stage:barrierStage+1,remaining:BARRIER_SETTINGS.respawnWarning};
+  playToast('⚠ TRICK TREAT! TWO INCOMING BARRIERS!');
   unlock('tricked',"You've Been Tricked!");
  }
  fakeSpawnClock=0;fakeSpawnAt=FAKE_SETTINGS.minInterval+Math.random()*(FAKE_SETTINGS.maxInterval-FAKE_SETTINGS.minInterval);
 }
 function freeCell(except=[]){const cells=[];for(let y=0;y<SIZE;y++)for(let x=0;x<SIZE;x++){const cell={x,y};if(!snake.some(s=>same(s,cell))&&!occupiedByBarrier(cell)&&!except.some(s=>same(s,cell)))cells.push(cell)}return cells.length?cells[Math.floor(Math.random()*cells.length)]:null}
-function reset(){countdownRemaining=0;runElapsed=0;barriers=BARRIER_SPAWNS.map(b=>({id:b.id,y:b.y,x:b.x,dir:b.dir,homeX:b.x,homeDir:b.dir,active:true,breakMs:0,shards:0,shardX:b.x}));barrierClock=0;fakeFood=null;fakeRemaining=0;fakeSpawnClock=0;fakeSpawnAt=FAKE_SETTINGS.minInterval+Math.random()*(FAKE_SETTINGS.maxInterval-FAKE_SETTINGS.minInterval);respawn=null;toastRemaining=0;$('toast').hidden=true;notified={};snake=[{x:10,y:10},{x:9,y:10},{x:8,y:10}];pendingGrowth=0;renderFrom=snake.map(p=>({...p}));dir=dirs.right;turnQueue=[];food=null;boostItem=null;shrinkItem=null;score=0;boostRemaining=0;boostItemRemaining=0;shrinkRemaining=0;boostSpawnClock=0;boostTrail=[];shrinksCollected=0;shrinkNextEligible=SETTINGS.shrinkMinLength;acc=0;last=0;food=freeCell();updateUI();draw()}
-function updateUI(){barriers.forEach((b,i)=>{$('barrierStatus'+(i+1)).textContent=`BAR ${i+1}: ${b.active?(b.breakMs>0?'BREAKING':'ACTIVE'):'DESTROYED'}`});scoreEl.textContent=score;bestEl.textContent=best;lengthEl.textContent=snake.length;const boosted=boostRemaining>0;const b=$('boostEffect');b.hidden=!boosted;if(boosted){$('boostFill').style.width=`${100*boostRemaining/SETTINGS.boostDuration}%`;$('boostTime').textContent=`${(boostRemaining/1000).toFixed(1)}s`}const sh=$('shrinkEffect');sh.hidden=!shrinkItem;if(shrinkItem){$('shrinkFill').style.width=`${100*shrinkRemaining/SETTINGS.shrinkVisible}%`;$('shrinkTime').textContent=`${(shrinkRemaining/1000).toFixed(1)}s`}}
+function reset(){wallShockRemaining=0;countdownRemaining=0;runElapsed=0;barrierStage=1;barriers=stageLayout(1).map(b=>({...b,homePos:b.pos,homeDir:b.dir,active:true,breakMs:0,shards:0,shardPos:b.pos}));barrierClock=0;fakeFood=null;fakeRemaining=0;fakeSpawnClock=0;fakeSpawnAt=FAKE_SETTINGS.minInterval+Math.random()*(FAKE_SETTINGS.maxInterval-FAKE_SETTINGS.minInterval);respawn=null;toastRemaining=0;$('toast').hidden=true;notified={};snake=[{x:10,y:10},{x:9,y:10},{x:8,y:10}];pendingGrowth=0;renderFrom=snake.map(p=>({...p}));dir=dirs.right;turnQueue=[];food=null;boostItem=null;shrinkItem=null;score=0;boostRemaining=0;boostItemRemaining=0;shrinkRemaining=0;boostSpawnClock=0;boostTrail=[];shrinksCollected=0;shrinkNextEligible=SETTINGS.shrinkMinLength;acc=0;last=0;food=freeCell();updateUI();draw()}
+function updateUI(){barriers.forEach((b,i)=>{$('barrierStatus'+(i+1)).textContent=`BAR ${i+1}: ${b.active?(b.breakMs>0?'BREAKING':(b.axis==='h'?'HORIZONTAL':'VERTICAL')):'DESTROYED'}`});scoreEl.textContent=score;bestEl.textContent=best;lengthEl.textContent=snake.length;const boosted=boostRemaining>0;const b=$('boostEffect');b.hidden=!boosted;if(boosted){$('boostFill').style.width=`${100*boostRemaining/SETTINGS.boostDuration}%`;$('boostTime').textContent=`${(boostRemaining/1000).toFixed(1)}s`}const sh=$('shrinkEffect');sh.hidden=!shrinkItem;if(shrinkItem){$('shrinkFill').style.width=`${100*shrinkRemaining/SETTINGS.shrinkVisible}%`;$('shrinkTime').textContent=`${(shrinkRemaining/1000).toFixed(1)}s`}}
 function show(title,message,icon,button){$('overlayTitle').textContent=title;$('overlayText').textContent=message;$('overlayIcon').textContent=icon;$('start').textContent=button;overlay.hidden=false}
 function countdownText(){
  const d=$('countdown');
@@ -141,7 +173,7 @@ function countdownText(){
  d.hidden=false;
 }
 function start(){reset();running=true;paused=false;overlay.hidden=true;countdownRemaining=4000;countdownText();$('pause').textContent='Pause'}
-function end(won=false){renderFrom=snake.map(p=>({...p}));if(won)unlock('perfect-snake','The Perfect Snake');running=false;countdownRemaining=0;$('countdown').hidden=true;boostRemaining=0;updateUI();show(won?'You win!':'Game over',won?'You filled the board!':`You scored ${score} points. Give it another try!`,won?'🏆':'💥','Play again')}
+function end(won=false){wallShockRemaining=0;renderFrom=snake.map(p=>({...p}));if(won)unlock('perfect-snake','The Perfect Snake');running=false;countdownRemaining=0;$('countdown').hidden=true;boostRemaining=0;updateUI();show(won?'You win!':'Game over',won?'You filled the board!':`You scored ${score} points. Give it another try!`,won?'🏆':'💥','Play again')}
 function turn(name){
  const v=dirs[name];
  if(!v||!running||paused||countdownRemaining>0)return;
@@ -159,7 +191,15 @@ function step(){
  renderFrom=snake.map(p=>({...p}));
  // Consume only one queued turn per movement tick, in the pressed order.
  if(turnQueue.length)dir=turnQueue.shift();
- const head={x:snake[0].x+dir.x,y:snake[0].y+dir.y};const eating=same(head,food),takingBoost=same(head,boostItem),takingShrink=same(head,shrinkItem),takingFake=same(head,fakeFood);const collisionBody=(eating||pendingGrowth>0)?snake:snake.slice(0,-1);if(head.x<0||head.x>=SIZE||head.y<0||head.y>=SIZE||collisionBody.some(p=>same(p,head))||occupiedByBarrier(head)){end();return}if(boostRemaining>0){boostTrail.unshift({...snake[0]});boostTrail=boostTrail.slice(0,12)}snake.unshift(head);
+ const head={x:snake[0].x+dir.x,y:snake[0].y+dir.y};
+ // Coyote Shock: the first wall impact freezes on the last valid tile.
+ // Collisions with the snake or barriers still end the run immediately.
+ if(head.x<0||head.x>=SIZE||head.y<0||head.y>=SIZE){
+  wallShockRemaining=SETTINGS.wallGraceMs;
+  turnQueue=[]; // No stored turns from before the wall impact.
+  return;
+ }
+ const eating=same(head,food),takingBoost=same(head,boostItem),takingShrink=same(head,shrinkItem),takingFake=same(head,fakeFood);const collisionBody=(eating||pendingGrowth>0)?snake:snake.slice(0,-1);if(collisionBody.some(p=>same(p,head))||occupiedByBarrier(head)){end();return}if(boostRemaining>0){boostTrail.unshift({...snake[0]});boostTrail=boostTrail.slice(0,12)}snake.unshift(head);
 // An active Boost earns two body segments per Food: one now,
 // and one on the next movement tick. Delaying the extra growth avoids
 // duplicating the tail cell and keeps grid collisions accurate.
@@ -167,8 +207,10 @@ if(eating){if(boostRemaining>0)pendingGrowth++}
 else if(pendingGrowth>0)pendingGrowth--;
 else snake.pop();
 if(takingBoost)collectBoost();if(takingShrink)collectShrink();if(takingFake)collectFake();
+if(eating){unlock('first-bite','First Bite');score+=boostRemaining>0?2:1;if(score>best){best=score;try{localStorage.setItem('neon-snake-best-v120',String(best))}catch{}}food=null}
 if(snake.length>=SIZE*SIZE){end(true);return}
-if(eating){unlock('first-bite','First Bite');score+=boostRemaining>0?2:1;if(score>best){best=score;try{localStorage.setItem('neon-snake-best-v120',String(best))}catch{}}food=freeCell([boostItem,shrinkItem,fakeFood]);if(!food){end(true);return}trySpawnShrink()}updateUI()}
+if(!food)food=freeCell([boostItem,shrinkItem,fakeFood]);
+if(eating)trySpawnShrink();updateUI()}
 function interval(){return boostRemaining>0?SETTINGS.boostInterval:SETTINGS.normalInterval}
 function rect(x,y,color,r=7,inset=2){const px=x*CELL+inset,py=y*CELL+inset,s=CELL-inset*2;ctx.fillStyle=color;ctx.beginPath();ctx.roundRect(px,py,s,s,r);ctx.fill()}
 function draw(){
@@ -204,7 +246,7 @@ if(gridGuide){
 }
 const pulse=.65+.35*Math.sin(performance.now()/230);
 barriers.forEach(b=>{
- if(!b.active){if(b.shards>0){ctx.save();ctx.globalAlpha=b.shards/650;ctx.fillStyle='#ff4268';for(let i=0;i<13;i++){const p=i/13,dx=Math.sin(i*9.7)*((650-b.shards)/9),dy=Math.cos(i*13.1)*((650-b.shards)/8);ctx.fillRect((b.shardX+1.5)*CELL+dx,(b.y+.5)*CELL+dy,4+4*p,4+4*p)}ctx.restore()}return}
+ if(!b.active){if(b.shards>0){ctx.save();ctx.globalAlpha=b.shards/650;ctx.fillStyle='#ff4268';for(let i=0;i<13;i++){const p=i/13,dx=Math.sin(i*9.7)*((650-b.shards)/9),dy=Math.cos(i*13.1)*((650-b.shards)/8);const base=b.axis==='h'?{x:b.shardPos+1.5,y:b.lane+.5}:{x:b.lane+.5,y:b.shardPos+1.5};ctx.fillRect(base.x*CELL+dx,base.y*CELL+dy,4+4*p,4+4*p)}ctx.restore()}return}
  ctx.save();ctx.shadowColor='#ff315b';ctx.shadowBlur=10+4*pulse;
  barrierCells(b).forEach((p,i)=>{
   rect(p.x,p.y,'#fa355c',6,3);
@@ -223,9 +265,9 @@ barriers.forEach(b=>{
  });ctx.restore();
 });
 if(respawn){
- const b=barriers[respawn.id];const flicker=.4+.4*Math.sin(performance.now()/100);
+ const layout=stageLayout(respawn.stage),flicker=.4+.4*Math.sin(performance.now()/100);
  ctx.save();ctx.globalAlpha=flicker;ctx.strokeStyle='#ff4770';ctx.lineWidth=3;
- barrierCells(b,b.homeX).forEach(p=>{ctx.strokeRect(p.x*CELL+3,p.y*CELL+3,CELL-6,CELL-6)});
+ layout.forEach(b=>barrierCells(b).forEach(p=>{ctx.strokeRect(p.x*CELL+3,p.y*CELL+3,CELL-6,CELL-6)}));
  ctx.restore();
 }
 if(boostRemaining>0){boostTrail.forEach((p,i)=>{ctx.globalAlpha=Math.max(0,.29*(1-i/12));rect(p.x,p.y,'#ffc44a',8,3)});ctx.globalAlpha=1}
@@ -239,43 +281,123 @@ const visualSnake=snake.map((part,i)=>{
  return {x:from.x+(part.x-from.x)*blend,y:from.y+(part.y-from.y)*blend};
 });
 if(visualSnake.length){
- // Trace the whole snake as one continuous, rounded body.
- // Connecting the centers also fills gaps when turning between grid cells.
+ // Boxie's visual design uses interpolated logical segments.
  const centers=visualSnake.map(p=>({x:p.x*CELL+CELL/2,y:p.y*CELL+CELL/2}));
- ctx.save();
- ctx.lineCap='round';ctx.lineJoin='round';
- ctx.strokeStyle=boostRemaining>0?'#d6a041':'#2fbb94';
- ctx.lineWidth=CELL-6;
- // Smooth the centerline through corners with rounded quadratic bends.
- // This makes the body feel dragged behind the head instead of hinged blocks.
- ctx.beginPath();
- const tail=centers[centers.length-1];
- ctx.moveTo(tail.x,tail.y);
- for(let i=centers.length-2;i>0;i--){
-  const p=centers[i],next=centers[i-1];
-  ctx.quadraticCurveTo(p.x,p.y,(p.x+next.x)/2,(p.y+next.y)/2);
+ const boosting=boostRemaining>0;
+ const neon=boosting?'#ffe987':'#a6ff4e';
+ const green=boosting?'#ad9134':'#168a64';
+ // Build one flexible silhouette: full shoulders behind Boxie's large box head,
+ // progressively tapering to a slender, rounded tail. Grid positions and physics
+ // remain untouched. Catmull-Rom samples make sharp turns visually flow.
+ if(centers.length>1){
+  // A Snake.io-inspired rounded, overlapping body. Original art and rendering,
+  // not sprites taken from another game. The grid hitboxes never change.
+  // The body has a consistent girth along its length, while only its last
+  // portion narrows into a proper snake tail.
+  const sampled=[];
+  const interpolate=(p0,p1,p2,p3,t)=>{
+   const t2=t*t,t3=t2*t;
+   return .5*((2*p1)+(-p0+p2)*t+(2*p0-5*p1+4*p2-p3)*t2+(-p0+3*p1-3*p2+p3)*t3);
+  };
+  for(let i=0;i<centers.length-1;i++){
+   const p0=centers[Math.max(0,i-1)],p1=centers[i];
+   const p2=centers[i+1],p3=centers[Math.min(centers.length-1,i+2)];
+   for(let k=0;k<6;k++){
+    const t=k/6;
+    sampled.push({x:interpolate(p0.x,p1.x,p2.x,p3.x,t),
+                  y:interpolate(p0.y,p1.y,p2.y,p3.y,t)});
+   }
+  }
+  sampled.push({...centers[centers.length-1]});
+  const length=sampled.length-1;
+  const withRadius=sampled.map((p,i)=>{
+   // Maintain thickness until the last 18% of the tail.
+   const taper=Math.max(0,(i/length-.82)/.18);
+   return {...p,r:10.6-(7.1*taper*taper)};
+  });
+  function disk(p,r){ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fill()}
+  ctx.save();
+  // Draw from tail to neck; dark outer ink is a *single* connected silhouette,
+  // rather than a green glow that erases the character's contour.
+  ctx.fillStyle='#042b29';
+  for(let i=length;i>=0;i--)disk(withRadius[i],withRadius[i].r+2.6);
+  ctx.fillStyle=boosting?'#b69c38':'#119467';
+  for(let i=length;i>=0;i--)disk(withRadius[i],withRadius[i].r);
+  // A modest, consistent belly highlight gives the body volume without looking
+  // like a fluorescent line or a shapeless slime.
+  ctx.strokeStyle=boosting?'#fff0a2':'#6eeb9c';
+  ctx.lineWidth=3.4;ctx.lineCap='round';ctx.lineJoin='round';ctx.globalAlpha=.62;
+  ctx.beginPath();
+  for(let i=0;i<=length;i++){
+   const p=withRadius[i];const prev=withRadius[Math.max(0,i-1)],next=withRadius[Math.min(length,i+1)];
+   const vx=next.x-prev.x,vy=next.y-prev.y,d=Math.hypot(vx,vy)||1;
+   const inset=p.r*.32;
+   const x=p.x-vy/d*inset,y=p.y+vx/d*inset;
+   i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  }
+  ctx.stroke();ctx.globalAlpha=1;
+  // Subtle small scales, not seams between every grid square.
+  for(let i=8;i<length-5;i+=15){
+   const p=withRadius[i],prev=withRadius[i-1],next=withRadius[i+1];
+   const dx=next.x-prev.x,dy=next.y-prev.y,d=Math.hypot(dx,dy)||1;
+   ctx.save();ctx.translate(p.x,p.y);ctx.rotate(Math.atan2(dy,dx));
+   ctx.fillStyle=boosting?'#ffe989':'#b7ff68';ctx.globalAlpha=.48;
+   ctx.beginPath();ctx.ellipse(0,-p.r*.43,3.7,1.7,0,0,Math.PI*2);ctx.fill();
+   ctx.restore();
+  }
+  ctx.restore();
  }
- if(centers.length>1)ctx.lineTo(centers[0].x,centers[0].y);
- ctx.stroke();
- // A subtle inner highlight keeps the body readable without separating tiles.
- ctx.strokeStyle=boostRemaining>0?'rgba(255,225,143,.28)':'rgba(123,255,204,.19)';
- ctx.lineWidth=CELL-16;
- ctx.stroke();
+ // Expressive boxed head: face remains legible at its native 30x30-pixel size.
+ const h=visualSnake[0],cx=h.x*CELL+CELL/2,cy=h.y*CELL+CELL/2;
+ const angle=Math.atan2(dir.y,dir.x);
+ ctx.save();ctx.translate(cx,cy);ctx.rotate(angle);
+ ctx.shadowColor=boosting?'#ffe066':'#58ff9c';ctx.shadowBlur=10;
+ ctx.fillStyle='#064b3e';ctx.beginPath();ctx.roundRect(-14,-14,28,28,9);ctx.fill();
+ ctx.shadowBlur=0;
+ const face=ctx.createLinearGradient(-12,-12,12,12);
+ face.addColorStop(0,boosting?'#fff3aa':'#baff5c');face.addColorStop(1,boosting?'#ffd562':'#4fe68c');
+ ctx.fillStyle=face;ctx.beginPath();ctx.roundRect(-11.5,-11.5,23,23,7);ctx.fill();
+ ctx.strokeStyle='rgba(255,255,255,.5)';ctx.lineWidth=1.3;
+ ctx.beginPath();ctx.moveTo(-8,-9);ctx.lineTo(3,-9);ctx.stroke();
+ // Eye direction is always towards the front of the moving cube.
+ for(const ey of [-6.2,6.2]){
+  ctx.fillStyle='#083a37';ctx.beginPath();ctx.ellipse(4,ey,4.7,4.7,0,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(5.5,ey-1.7,1.5,0,Math.PI*2);ctx.fill();
+ }
+ // Blush, smile, and a tiny animated forked tongue.
+ ctx.fillStyle='rgba(255,110,138,.68)';ctx.beginPath();ctx.arc(-2.5,-10,1.65,0,Math.PI*2);ctx.arc(-2.5,10,1.65,0,Math.PI*2);ctx.fill();
+ ctx.strokeStyle='#07423a';ctx.lineCap='round';ctx.lineWidth=1.7;
+ ctx.beginPath();ctx.arc(10,0,2.1,-Math.PI/2,Math.PI/2);ctx.stroke();
+ if(Math.sin(performance.now()/420)>0.78){
+  ctx.strokeStyle='#ff5f9a';ctx.lineWidth=1.6;ctx.beginPath();ctx.moveTo(12,0);ctx.lineTo(18,0);
+  ctx.moveTo(18,0);ctx.lineTo(21,-3);ctx.moveTo(18,0);ctx.lineTo(21,3);ctx.stroke();
+ }
  ctx.restore();
- // Draw the head last, on top of the continuous body.
- const h=visualSnake[0];
- ctx.shadowBlur=7;ctx.shadowColor=boostRemaining>0?'#ffcb5f':'#64ffc1';
- rect(h.x,h.y,boostRemaining>0?'#ffe08b':'#64ffc1',8,2);
- ctx.shadowBlur=0;ctx.fillStyle='#0a2832';
- const ex=h.x*CELL+CELL/2+dir.x*5,ey=h.y*CELL+CELL/2+dir.y*5;
- ctx.beginPath();
- ctx.arc(ex-dir.y*5,ey+dir.x*5,2.5,0,Math.PI*2);
- ctx.arc(ex+dir.y*5,ey-dir.x*5,2.5,0,Math.PI*2);
- ctx.fill();
+ if(wallShockRemaining>0){
+  ctx.save();const pulse=.5+.5*Math.sin((SETTINGS.wallGraceMs-wallShockRemaining)*.14);
+  ctx.strokeStyle=`rgba(100,220,255,${pulse})`;ctx.lineWidth=2.5;ctx.shadowColor='#55dfff';ctx.shadowBlur=15;
+  ctx.beginPath();ctx.arc(cx,cy,CELL*.48,0,Math.PI*2);ctx.stroke();ctx.restore();
+ }
 }
 }
 function frame(t){if(running&&!paused){if(!last)last=t;const dt=Math.min(t-last,250);last=t;
 if(countdownRemaining>0){countdownRemaining=Math.max(0,countdownRemaining-dt);if(countdownRemaining===0)turnQueue=[];countdownText();draw();requestAnimationFrame(frame);return}
+// Coyote Shock runs on real elapsed time, not movement ticks.
+ // A valid perpendicular turn immediately rescues the snake before expiration.
+ if(wallShockRemaining>0){
+  const rescue=turnQueue.findIndex(v=>(v.x!==dir.x||v.y!==dir.y)&&
+    (snake[0].x+v.x)>=0&&(snake[0].x+v.x)<SIZE&&
+    (snake[0].y+v.y)>=0&&(snake[0].y+v.y)<SIZE);
+  if(rescue>=0){
+   dir=turnQueue[rescue];
+   turnQueue=turnQueue.slice(rescue+1);
+   wallShockRemaining=0;acc=0;
+   step(); // Actual collisions still apply.
+  }else{
+   wallShockRemaining=Math.max(0,wallShockRemaining-dt);
+   if(wallShockRemaining===0){end();draw();requestAnimationFrame(frame);return}
+  }
+ }
 runElapsed+=dt;
 for(const [id,ms,label] of [['still-alive',300000,'Still Alive'],['endurance',600000,'Endurance'],['unstoppable',1200000,'Unstoppable'],['snake-legend',1800000,'Snake Legend']])if(runElapsed>=ms)unlock(id,label);
 if(boostRemaining>0){boostRemaining=Math.max(0,boostRemaining-dt);if(!boostRemaining)boostTrail=[]}
@@ -284,7 +406,7 @@ if(shrinkItem){shrinkRemaining-=dt;if(shrinkRemaining<=0){shrinkItem=null;shrink
 if(toastRemaining>0){toastRemaining-=dt;if(toastRemaining<=0)$('toast').hidden=true}
 if(fakeFood){fakeRemaining-=dt;if(fakeRemaining<=0){fakeFood=null;fakeRemaining=0}}
 if(respawn){respawn.remaining-=dt;if(respawn.remaining<=0)respawnBarrier()}
-const absent=barriers.some(b=>!b.active);
+const absent=barriers.every(b=>!b.active);
 if(absent&&!fakeFood&&!respawn){fakeSpawnClock+=dt;if(fakeSpawnClock>=fakeSpawnAt){fakeFood=freeCell([food,boostItem,shrinkItem]);fakeRemaining=fakeFood?FAKE_SETTINGS.visible:0;fakeSpawnClock=0;fakeSpawnAt=FAKE_SETTINGS.minInterval+Math.random()*(FAKE_SETTINGS.maxInterval-FAKE_SETTINGS.minInterval)}}
 boostSpawnClock+=dt;if(boostSpawnClock>=SETTINGS.boostSpawnInterval&&!boostItem&&boostRemaining<=0){boostSpawnClock=0;boostItem=freeCell([food,shrinkItem,fakeFood]);boostItemRemaining=boostItem?SETTINGS.boostVisible:0}
 barriers.forEach(b=>{
@@ -293,12 +415,142 @@ barriers.forEach(b=>{
 });
 barrierClock+=dt;
 while(running&&barrierClock>=BARRIER_SETTINGS.stepMs){barrierClock-=BARRIER_SETTINGS.stepMs;barriers.forEach(patrolBarrier)}
-acc+=dt;let moves=0;while(running&&acc>=interval()&&moves++<8){const delay=interval();step();acc-=delay}updateUI();draw()}else last=t;requestAnimationFrame(frame)}
+if(wallShockRemaining>0)acc=0;else acc+=dt;let moves=0;while(running&&wallShockRemaining<=0&&acc>=interval()&&moves++<8){const delay=interval();step();acc-=delay}updateUI();draw()}else last=t;requestAnimationFrame(frame)}
 function pause(){if(!running)return;paused=!paused;$('pause').textContent=paused?'Resume':'Pause';if(paused)show('Paused','Press Space or click below to resume.','⏸️','Resume');else{overlay.hidden=true;last=0;acc=0;countdownText()}}
 $('start').addEventListener('click',()=>{if(running&&paused)pause();else start()});$('restart').addEventListener('click',start);$('pause').addEventListener('click',pause);
-window.addEventListener('keydown',e=>{const key=e.key.toLowerCase();const keys={arrowup:'up',arrowdown:'down',arrowleft:'left',arrowright:'right',w:'up',s:'down',a:'left',d:'right'};const direction=keys[key];if(direction){e.preventDefault();if(!running&&!paused)start();if(!paused)turn(direction)}else if(e.code==='Space'){e.preventDefault();if(running)pause();else start()}});
+window.addEventListener('keydown',e=>{if(document.getElementById('gameScreen').hidden)return;const key=e.key.toLowerCase();const keys={arrowup:'up',arrowdown:'down',arrowleft:'left',arrowright:'right',w:'up',s:'down',a:'left',d:'right'};const direction=keys[key];if(direction){e.preventDefault();if(!running&&!paused)start();if(!paused)turn(direction)}else if(e.code==='Space'){e.preventDefault();if(running)pause();else start()}});
 document.querySelectorAll('[data-dir]').forEach(b=>b.addEventListener('click',()=>{if(!running)start();if(!paused)turn(b.dataset.dir)}));let swipe=null;canvas.addEventListener('pointerdown',e=>swipe={x:e.clientX,y:e.clientY});canvas.addEventListener('pointerup',e=>{if(!swipe)return;const dx=e.clientX-swipe.x,dy=e.clientY-swipe.y;swipe=null;if(Math.max(Math.abs(dx),Math.abs(dy))<20)return;if(!running)start();if(!paused)turn(Math.abs(dx)>Math.abs(dy)?(dx>0?'right':'left'):(dy>0?'down':'up'))});
+window.NeonSnake={
+ startFromMenu(){document.getElementById('mainMenu').hidden=true;document.getElementById('gameScreen').hidden=false;start();},
+ returnToMenu(){running=false;paused=false;wallShockRemaining=0;countdownRemaining=0;overlay.hidden=true;document.getElementById('gameScreen').hidden=true;document.getElementById('mainMenu').hidden=false;last=0;},
+ setMobileControls(enabled){document.getElementById('gameScreen').classList.toggle('hide-mobile-controls',!enabled);},
+ isGridGuideEnabled(){return gridGuide;},
+ setGridGuide(enabled){if(gridGuide!==enabled)$('gridGuideToggle').click();}
+};
 syncGridGuide();reset();requestAnimationFrame(frame);
 })();
 </script>
+<script>
+(()=>{'use strict';
+const art=document.getElementById('boxieCanvas');
+if(art){
+ const ctx=art.getContext('2d');ctx.scale(2,2);
+ const points=[
+  [136,153],[135,174],[142,197],[161,217],[189,227],[221,220],
+  [245,199],[258,178],[254,158],[239,149],[221,154],[213,171],
+  [221,185],[244,187],[269,178],[291,159],[313,149],[337,151],
+  [355,163],[370,178],[382,177],[391,161],[398,139],[406,119]
+ ].map(([x,y])=>({x,y}));
+ function curve(t){
+  const j=Math.min(points.length-2,Math.floor(t)),u=t-j,p0=points[Math.max(0,j-1)],p1=points[j],p2=points[j+1],p3=points[Math.min(points.length-1,j+2)];
+  const c=(a,b,d,e)=>.5*(2*b+(-a+d)*u+(2*a-5*b+4*d-e)*u*u+(-a+3*b-3*d+e)*u*u*u);
+  return {x:c(p0.x,p1.x,p2.x,p3.x),y:c(p0.y,p1.y,p2.y,p3.y)};
+ }
+ const sampled=[];for(let t=0;t<points.length-1;t+=.18)sampled.push(curve(t));sampled.push(points[points.length-1]);
+ const contour=sampled.map((p,i)=>{
+  const prev=sampled[Math.max(0,i-1)],next=sampled[Math.min(sampled.length-1,i+1)];
+  const dx=next.x-prev.x,dy=next.y-prev.y,len=Math.hypot(dx,dy)||1;
+  return {...p,nx:-dy/len,ny:dx/len,radius:2.1+12*Math.pow(1-i/(sampled.length-1),.78)};
+ });
+ const ribbon=(extra,color)=>{
+  ctx.beginPath();
+  contour.forEach((p,i)=>{const x=p.x+p.nx*(p.radius+extra),y=p.y+p.ny*(p.radius+extra);i?ctx.lineTo(x,y):ctx.moveTo(x,y)});
+  for(let i=contour.length-1;i>=0;i--){const p=contour[i];ctx.lineTo(p.x-p.nx*(p.radius+extra),p.y-p.ny*(p.radius+extra))}
+  ctx.closePath();ctx.fillStyle=color;ctx.fill();
+ };
+ ctx.save();ctx.lineJoin='round';ctx.shadowBlur=20;ctx.shadowColor='#50ff9c44';
+ ribbon(3,'#073e35');ctx.shadowBlur=0;ribbon(0,'#168a64');
+ ctx.beginPath();contour.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));
+ ctx.strokeStyle='#a6ff4e';ctx.globalAlpha=.37;ctx.lineWidth=3;ctx.shadowBlur=7;ctx.shadowColor='#a6ff4e';ctx.stroke();ctx.restore();
+ // Matching the in-game mascot's square head, eyes, blush and smile.
+ ctx.save();ctx.translate(136,153);ctx.scale(2.8,2.8);
+ ctx.shadowColor='#58ff9c';ctx.shadowBlur=10;ctx.fillStyle='#064b3e';
+ ctx.beginPath();ctx.roundRect(-14,-14,28,28,9);ctx.fill();ctx.shadowBlur=0;
+ const face=ctx.createLinearGradient(-12,-12,12,12);
+ face.addColorStop(0,'#baff5c');face.addColorStop(1,'#4fe68c');
+ ctx.fillStyle=face;ctx.beginPath();ctx.roundRect(-11.5,-11.5,23,23,7);ctx.fill();
+ ctx.strokeStyle='rgba(255,255,255,.5)';ctx.lineWidth=1.3;
+ ctx.beginPath();ctx.moveTo(-8,-9);ctx.lineTo(3,-9);ctx.stroke();
+ for(const ey of [-6.2,6.2]){
+  ctx.fillStyle='#083a37';ctx.beginPath();ctx.ellipse(4,ey,4.7,4.7,0,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(5.5,ey-1.7,1.5,0,Math.PI*2);ctx.fill();
+ }
+ ctx.fillStyle='rgba(255,110,138,.68)';ctx.beginPath();ctx.arc(-2.5,-10,1.65,0,Math.PI*2);ctx.arc(-2.5,10,1.65,0,Math.PI*2);ctx.fill();
+ ctx.strokeStyle='#07423a';ctx.lineCap='round';ctx.lineWidth=1.7;ctx.beginPath();ctx.arc(10,0,2.1,-Math.PI/2,Math.PI/2);ctx.stroke();
+ ctx.strokeStyle='#ff5f9a';ctx.lineWidth=1.6;ctx.beginPath();ctx.moveTo(12,0);ctx.lineTo(18,0);ctx.moveTo(18,0);ctx.lineTo(21,-3);ctx.moveTo(18,0);ctx.lineTo(21,3);ctx.stroke();
+ ctx.restore();
+}
+
+const modal=document.getElementById('dialog');
+const title=document.getElementById('dialogTitle');
+const content=document.getElementById('dialogContent');
+const close=document.getElementById('close');
+const achievementData=[
+ ['first-bite','First Bite','Eat your first Neon Nibble.'],
+ ['full-power','Full Power','Collect your first Speed Snack.'],
+ ['against-all-odds','Against All Odds','Collect your first Shrink Snack.'],
+ ['still-alive','Still Alive','Survive for 5 minutes in one run.'],
+ ['endurance','Endurance','Survive for 10 minutes in one run.'],
+ ['unstoppable','Unstoppable','Survive for 20 minutes in one run.'],
+ ['snake-legend','Snake Legend','Survive for 30 minutes in one run.'],
+ ['barrier-breaker','Barrier Breaker','Destroy both Glowing Barriers in one run.'],
+ ['tricked',"You've Been Tricked!",'Eat Trick Treat for the first time.'],
+ ['perfect-snake','The Perfect Snake','Fill all 400 squares.']
+];
+const pageNames=['Play','Achievements','How to Play','Settings','Credits'];
+function hideDialog(){modal.hidden=true;document.body.style.overflow='';}
+function saved(key){try{return localStorage.getItem(key)}catch{return null}}
+function persist(key,value){try{localStorage.setItem(key,String(value))}catch{}}
+function showDialog(name){
+ title.textContent=name;
+ if(name==='Achievements'){
+  const unlocked=achievementData.filter(([id])=>saved('neon-snake-achievement-'+id)==='1').length;
+  content.innerHTML=`<p>${unlocked} of ${achievementData.length} achievements unlocked.</p>`+
+   achievementData.map(([id,label,desc])=>{
+    const done=saved('neon-snake-achievement-'+id)==='1';
+    return `<div class="entry">${done?'🏆':'🔒'} <strong>${label}</strong><br><span class="micro">${done?desc:'Not unlocked yet'}</span></div>`;
+   }).join('');
+ }else if(name==='How to Play'){
+  content.innerHTML=`<p>Help Boxie eat, grow, and survive!</p><ul>
+   <li><strong>Neon Nibble</strong> — Grow by one segment and earn one point.</li>
+   <li><strong>Speed Snack</strong> — Move faster for 10 seconds, score double and grow twice as much.</li>
+   <li><strong>Shrink Snack</strong> — Cut Boxie's length in half.</li>
+   <li><strong>Trick Treat</strong> — A deceptive snack that brings back two Glowing Barriers after you destroy both.</li>
+   <li><strong>Glowing Barriers</strong> — Trap each barrier for 3 seconds to break it. Avoid touching them with Boxie's head.</li>
+   <li><strong>Coyote Shock</strong> — Turn within 0.20 seconds after reaching a wall to survive.</li>
+   </ul><p><strong>Controls:</strong> Arrow keys or WASD to move, Space to pause, and swipe on touchscreens.</p>
+   <p><strong>Final challenge:</strong> Fill all 400 squares to become The Perfect Snake!</p>`;
+ }else if(name==='Settings'){
+  content.innerHTML=`<p>Make the arcade your own.</p>
+   <label class="switch">Grid Guide <input id="settingGridGuide" type="checkbox"></label>
+   <label class="switch">Mobile Controls <input id="settingMobileControls" type="checkbox"></label>
+   <label class="switch">Sound Effects <input type="checkbox" disabled aria-label="Sound Effects, coming later"></label>
+   <label class="switch">Music <input type="checkbox" disabled aria-label="Music, coming later"></label>
+   <label class="switch">Language <select aria-label="Language" disabled><option>English</option></select></label>
+   <p class="micro">Grid Guide and Mobile Controls work now and are saved. Audio and localization are planned for later updates.</p>`;
+  const grid=document.getElementById('settingGridGuide');
+  const mobile=document.getElementById('settingMobileControls');
+  grid.checked=window.NeonSnake.isGridGuideEnabled();
+  mobile.checked=saved('neon-snake-mobile-controls')!=='false';
+  grid.addEventListener('change',()=>window.NeonSnake.setGridGuide(grid.checked));
+  mobile.addEventListener('change',()=>{persist('neon-snake-mobile-controls',mobile.checked);window.NeonSnake.setMobileControls(mobile.checked)});
+ }else if(name==='Credits'){
+  content.innerHTML=`<p><strong>NEON SNAKE</strong></p><p>Developed by <strong>Hadryn Games</strong><br>Made with assistance from OpenAI.</p>
+  <p>Starring <strong>Boxie</strong>, our cheerful square-headed snake.</p>
+  <p class="micro">“From a little square-headed snake to Boxie. Every great adventure starts somewhere.”</p>`;
+ }
+ modal.hidden=false;document.body.style.overflow='hidden';close.focus();
+}
+document.querySelectorAll('[data-screen]').forEach(button=>button.addEventListener('click',()=>{
+ const name=button.dataset.screen;
+ if(name==='Play'){hideDialog();window.NeonSnake.startFromMenu();return}
+ if(pageNames.includes(name))showDialog(name);
+}));
+close.addEventListener('click',hideDialog);
+modal.addEventListener('click',e=>{if(e.target===modal)hideDialog()});
+window.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)hideDialog()});
+document.getElementById('backToMenu').addEventListener('click',()=>{hideDialog();window.NeonSnake.returnToMenu()});
+window.NeonSnake.setMobileControls(saved('neon-snake-mobile-controls')!=='false');
+
+})();</script>
 </body></html>
