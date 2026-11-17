@@ -1,35 +1,32 @@
-# Neon Snake v1.4.0 — Starring Boxie
+# Neon Snake v1.5.0 — Boxie's Wardrobe Update
 
-A neon arcade adventure starring Boxie, the little snake with a big personality.
+Hadryn Games
 
-## Play
+Eat. Grow. Survive. Customize your Boxie!
 
-Open `index.html` in a modern web browser. No installation or external dependencies are required.
+## Getting started
 
-- Move with WASD, arrow keys, or touchscreen controls.
-- Press Space to pause or resume.
-- Enable Grid Guide from Settings for optional collectible guides.
+Extract the entire ZIP into one folder and open `index.html` in your browser. Use the arrow keys, WASD or on-screen controls to play. Settings include English and Português (Brasil), grid guidance and mobile controls.
 
-## Collectibles
+## Boxie's Wardrobe
 
-- **Neon Nibble:** earn one point and grow by one segment.
-- **Speed Snack:** 10 seconds of increased speed, double points and double growth.
-- **Shrink Snack:** reduce Boxie's length by half; available for five seconds when it appears.
-- **Trick Treat:** brings back two Glowing Barriers after both have been destroyed.
+- Six free colors, selectable in the main menu.
+- Earn one Neon Coin per score point. The HUD shows your balance including points earned in the current run.
+- Coins are credited when a run ends, restarts or returns to the menu.
+- Unlock cosmetic sets and their themed backgrounds in the shop. Equip them independently.
 
-## What's new in v1.4.0
+| Set | Background | Neon Coins |
+| --- | --- | ---: |
+| Street Boxie | Skatepark | 500 |
+| Country Girl Boxie | Countryside | 1,000 |
+| Wizard Boxie | Enchanted Forest | 2,000 |
+| Secret Agent Boxie | Midnight City | 3,500 |
+| Queen Boxie | Royal Castle | 5,000 |
+| Rainbow Boxie | Outer Space | 8,000 |
+| Total | | 20,000 |
 
-- Introduced Boxie, with a square-shaped head, flowing body and tapered tail.
-- Added the main menu, achievements, instructions, settings and credits.
-- Added persistent Grid Guide and Mobile Controls preferences.
-- Added progressive horizontal, vertical and mixed barrier layouts.
-- Barriers reverse to avoid each other and break after three seconds of continuous obstruction by Boxie's body. Head contact is fatal.
-- Trick Treat appears only when both barriers are destroyed; two barriers return after a warning when their spawn positions are free.
-- Rebalanced Speed Snack availability to every 55 seconds, subject to availability.
-- Added Coyote Shock, a 200 ms opportunity to turn at a wall.
-- Standardized collectible names throughout the interface.
-- Corrected endgame victory detection: fill all 400 cells to win.
+Rainbow Boxie is purely cosmetic. Every player gets the temporary rainbow effect when collecting a Speed Snack; only the snack grants gameplay bonuses.
 
-Audio, localization and cosmetic customization are reserved for future updates.
+Progress is saved locally in the browser. The official wallet starts fresh and does not import experimental wallets. Existing v1.4.0 records and achievements remain available on the same browser and origin. No real-money purchases, accounts or online rankings are included in this update.
 
 © 2026 Hadryn Games. Developed with assistance from OpenAI.
